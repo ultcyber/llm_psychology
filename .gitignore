@@ -12,6 +12,10 @@ extract_pptx_with_images.py
 # Development files
 section*-detailed-content.md
 presentation-restructure-plan.md
+slides_with_images.md
+
+# Lock files
+.~lock.*
 
 # Original PowerPoint file (large binary)
 *.pptx
