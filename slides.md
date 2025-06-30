@@ -358,6 +358,27 @@ AI: [references specific security point from earlier]
 **New Considerations:**
 - **Verify agent actions** - understand what tools are being used and only confirm if you know what the command does
 - **Understand limitations** - agents are still LLMs with the same core psychology
+- **Force LLMS to use tools** by using keywords - ex. "use code" or "use web"
+
+--
+
+## Psychology Tips for MCP and Agents
+
+### 🔧 Understanding Enhanced Capabilities
+
+ChatGPT:
+
+User: how many r's are in the word strawberry? Use code
+
+AI: Analysis:
+```python
+# Count how many times the letter 'r' appears in the word 'strawberry'
+word = "strawberry"
+count_r = word.count('r')
+count_r
+
+```
+There are 3 letter **'r'**s in the word "strawberry". 
 
 --
 
