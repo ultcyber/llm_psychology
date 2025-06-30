@@ -1,0 +1,40 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Extraction scripts (not needed for presentation)
+extract_pptx.py
+extract_pptx_with_images.py
+
+# Development files
+section*-detailed-content.md
+presentation-restructure-plan.md
+
+# Original PowerPoint file (large binary)
+*.pptx
+
+# Backup files
+*kopia*
+*backup*
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

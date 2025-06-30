@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Psychology of LLMs</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/monokai.css" id="highlight-theme">
+
+		<style>
+			/* Global font size reduction to 80-90% of default */
+			.reveal {
+				font-size: 32px !important;
+			}
+			
+			.reveal .slides section {
+				font-size: 0.85em !important;
+			}
+			
+			.reveal h1 {
+				font-size: 2.2em !important;
+			}
+			
+			.reveal h2 {
+				font-size: 1.8em !important;
+			}
+			
+			.reveal h3 {
+				font-size: 1.4em !important;
+			}
+			
+			.reveal p {
+				font-size: 0.9em !important;
+			}
+			
+			.reveal li {
+				font-size: 0.85em !important;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides.md"
+						 data-separator="^---$"
+						 data-separator-vertical="^--$"
+						 data-separator-notes="^Note:"
+						 data-charset="utf-8">
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/zoom/zoom.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/math/math.js"></script>
+
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				center: true,
+				transition: 'none',
+				transitionSpeed: 'default',
+				backgroundTransition: 'fade',
+				
+				// Display controls
+				controls: true,
+				controlsTutorial: true,
+				controlsLayout: 'bottom-right',
+				controlsBackArrows: 'faded',
+				
+				// Display progress bar
+				progress: true,
+				
+				// Display slide number
+				slideNumber: true,
+				
+				// Add slide number to URL hash
+				hashOneBasedIndex: false,
+				
+				// Keyboard navigation
+				keyboard: true,
+				overview: true,
+				
+				// Touch navigation
+				touch: true,
+				loop: false,
+				rtl: false,
+				navigationMode: 'default',
+				shuffle: false,
+				fragments: true,
+				fragmentInURL: false,
+				embedded: false,
+				help: true,
+				pause: true,
+				showSlideNumber: 'all',
+				previewLinks: false,
+				autoSlide: 0,
+				autoSlideStoppable: true,
+				mouseWheel: false,
+				hideInactiveCursor: true,
+				hideCursorTime: 5000,
+				preloadIframes: null,
+
+				// Presentation styling
+				margin: 0.04,
+				minScale: 0.2,
+  				maxScale: 2.0,
+				
+				// Math plugin
+				math: {
+					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+				},
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ 
+					RevealMarkdown, 
+					RevealHighlight, 
+					RevealNotes, 
+					RevealZoom,
+					RevealMath
+				]
+			});
+
+			// Custom keyboard shortcuts
+			Reveal.addKeyBinding({keyCode: 70, key: 'F', description: 'Enter fullscreen'}, function() {
+				if (document.documentElement.requestFullscreen) {
+					document.documentElement.requestFullscreen();
+				}
+			});
+
+			// Add slide enter/exit animations
+			Reveal.on('slidechanged', event => {
+				// Animate slide transitions
+				const currentSlide = event.currentSlide;
+				currentSlide.style.animation = 'fadeInUp 0.6s ease-out';
+			});
+		</script>
+	</body>
+</html>
