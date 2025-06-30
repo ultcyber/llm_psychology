@@ -177,6 +177,10 @@ https://tiktokenizer.vercel.app/
 
 ### Hallucinations
 
+![Hallucinations](images/slide_4_image_3.png)
+<!-- .element: style="max-width: 35%; margin: 5px auto;" -->
+
+
 
 --
 
