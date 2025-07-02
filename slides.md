@@ -1,16 +1,23 @@
 <!-- Slide 1 -->
 ## An LLM goes to the doctor
 
-Understanding LLMs psychology through how they are trained.
+Understanding LLMs psychology through how the models are trained.
 
 ---
 
 <!-- Slide 2 -->
 ## Agenda
 
-- How are LLMs built 
-- What are the differences between model types? 
-- Some tips and tricks on how to effectively use LLMs 
+- **Phase 1: Data Gathering** → Token Awareness Psychology
+
+- **Phase 2: Base Model Creation** → Understanding Pattern Prediction
+
+- **Phase 3: Fine-tuning** → Conversational Abilities
+
+- **Context Window Management** → Model's memory
+
+- **Beyond Basic Chat:** MCP and Agents
+
 
 ---
 
@@ -109,7 +116,9 @@ https://tiktokenizer.vercel.app/
 - **Likelihood maximization** - pick the most probable next token
 - **Pattern completion** based on training data
 - **Confident predictions** - always output something
-- **No built-in uncertainty** - models don't say "I don't know"
+- **Pretraining**: large, unlabeled datasets for general language understanding
+
+**Mostly a well-defined and standardized process (no massive innovations in this space)**
 
 --
 
@@ -123,16 +132,6 @@ https://tiktokenizer.vercel.app/
 
 --
 
-## Training Scale & Process
-
-**Learning Process:**
-- See partial text → Predict next word → Check against actual → Adjust weights
-- Repeat trillions of times across the entire dataset
-- Gradually builds sophisticated language understanding
-- Mostly a well-defined and standardized process (no massive innovations in this space)
-
---
-
 ## Base model
 
 ![Base Model](images/slide_4_image_2.png)
@@ -140,9 +139,9 @@ https://tiktokenizer.vercel.app/
 
 https://huggingface.co/spaces/Bradarr/Gemma-3-pt-llamacpp
 
---
+---
 
-## From Base Model to Conversational AI
+## Phase 3: From Base Model to Conversational AI
 
 ## Supervised Fine-tuning (SFT) with human experts
 
@@ -226,7 +225,6 @@ https://tiktokenizer.vercel.app/
 **Red Flags to Watch For:**
 - Very specific claims without sources
 - Information that seems too convenient
-- Responses that don't acknowledge uncertainty
 - Claims about recent events (training cutoff issues) - can be adjusted with agents (more later)
 
 ---
@@ -235,9 +233,12 @@ https://tiktokenizer.vercel.app/
 
 ### Context Windows
 
-**Context Window Architecture:**
-- **Fixed size memory** - 128K+ tokens window (GPT-4o) to even several million for reasoning models
+**Model's memory**
+- **Fixed size memory** - 128K+ tokens window (GPT-4o) - some models "claim" larger windows<br/>
+https://github.com/NVIDIA/RULER
+
 - **Sliding window** - older content gets "forgotten" when limit reached
+
 - **Attention mechanisms** - models focus on relevant parts of context
 
 --
@@ -250,7 +251,7 @@ https://tiktokenizer.vercel.app/
 
 **Context Window Psychology:**
 - **Everything in session** is "remembered" and influences responses
-- **Recent information** carries more weight than older information
+
 - **Context switching** (new chat) completely resets memory
 
 --
@@ -311,12 +312,69 @@ AI: [references specific security point from earlier]
 
 ### Advanced Context Strategies
 
-**Power User Techniques:**
+**Context Priming:**
+- Establish **role and context** for complex tasks
+
+```text
+[User] Explain trigonometry
+
+[Claude] Trigonometry is the study of triangles and the relationships between their angles and sides. 
+It originated from practical needs like navigation, astronomy, and surveying.
+The foundation rests on three basic ratios in right triangles. 
+If you have a right triangle and focus on one of the non-right angles, you can define:
+
+Sine (sin): opposite side ÷ hypotenuse
+Cosine (cos): adjacent side ÷ hypotenuse
+Tangent (tan): opposite side ÷ adjacent side
+
+These ratios stay constant for any given angle, regardless of the triangle's size. 
+A 30° angle always has the same sine value, whether you're measuring a tiny triangle or a massive one.
+(...)
+```
+--
+
+### Advanced Context Strategies
 
 **Context Priming:**
 - Establish **role and context** for complex tasks
-- **Start a new chat** when context becomes unfocused
+
+```text
+[User] You are a helpful Maths teacher who explains the concepts to a primary school student using simple examples. 
+Explain trigonometry.
+
+[Claude] Trigonometry is about triangles and how their sides and angles relate to each other.
+Let me start with the basics using things you already know:
+What makes trigonometry special?
+We focus on right triangles - triangles that have one corner that's exactly like the corner of a square (90 degrees).
+The three main parts:
+Think of a right triangle like a ladder leaning against a wall:
+
+The wall is the "opposite" side
+The ground is the "adjacent" side
+The ladder itself is the "hypotenuse" (the longest side)
+
+The three trigonometric ratios:
+
+Sine (sin) = opposite ÷ hypotenuse
+If your ladder is 5 meters long and reaches 3 meters up the wall, then sin = 3÷5 = 0.6
+Cosine (cos) = adjacent ÷ hypotenuse
+If the bottom of the ladder is 4 meters from the wall, then cos = 4÷5 = 0.8
+Tangent (tan) = opposite ÷ adjacent
+This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.75
+```
+
+--
+
+### Advanced Context Strategies
+
+![Hallucinations](images/slide_6_image_1.png)
+<!-- .element: style="max-width: 65%; margin: 5px auto;" -->
+
 - **Use system prompts** to maintain consistent context
+
+- **Use temperature settings** - low temperature == low creativity
+
+- **Start a new chat** when context becomes unfocused
 
 ---
 
@@ -372,18 +430,24 @@ AI: [references specific security point from earlier]
 
 ChatGPT:
 
+```text
 User: how many r's are in the word strawberry? Use code
+```
 
+```text
 AI: Analysis:
+```
+
 ```python
 # Count how many times the letter 'r' appears in the word 'strawberry'
 word = "strawberry"
 count_r = word.count('r')
 count_r
-
 ```
-There are 3 letter **'r'**s in the word "strawberry". 
 
+```text
+There are 3 letter **'r'**s in the word "strawberry". 
+```
 --
 
 ## Psychology Tips for MCP and Agents
