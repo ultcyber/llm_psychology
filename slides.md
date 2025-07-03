@@ -16,7 +16,7 @@ Understanding LLMs psychology through how the models are trained.
 
 - **Context Window Management** → Model's memory
 
-- **Beyond Basic Chat:** MCP and Agents
+- **Beyond Basic Chat:** Tools, MCP and Agents
 
 
 ---
@@ -224,7 +224,7 @@ https://tiktokenizer.vercel.app/
 
 **Red Flags to Watch For:**
 - Very specific claims without sources
-- Information that seems too convenient
+- Information that seems too convenient - especially when you try to correct the model
 - Claims about recent events (training cutoff issues) - can be adjusted with agents (more later)
 
 ---
@@ -378,7 +378,7 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 
 ---
 
-## 🤖 Beyond Basic Chat: MCP and Agents 🤖
+## 🤖 Beyond Basic Chat: Tools and Agents 🤖
 
 ### Extending LLM Capabilities
 
@@ -390,7 +390,7 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 
 --
 
-## 🤖 Beyond Basic Chat: MCP and Agents 🤖
+## 🤖 Beyond Basic Chat: Tools and Agents 🤖
 
 ### Extending LLM Capabilities
 
@@ -401,11 +401,11 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 
 --
 
-## Psychology Tips for MCP and Agents
+## Psychology Tips for Tools and Agents
 
 ### 🔧 Understanding Enhanced Capabilities
 
-**What Changes with MCP/Agents:**
+**What Changes with Tools/Agents:**
 - **Reduced hallucination** - access to real-time, verified data
 - **Dynamic context** - can fetch relevant information as needed
 - **Action capability** - can modify files, send emails, make API calls
@@ -413,7 +413,7 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 
 --
 
-## Psychology Tips for MCP and Agents
+## Psychology Tips for Tools and Agents
 
 ### 🔧 Understanding Enhanced Capabilities
 
@@ -424,7 +424,7 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 
 --
 
-## Psychology Tips for MCP and Agents
+## Psychology Tips for Tools and Agents
 
 ### 🔧 Understanding Enhanced Capabilities
 
@@ -450,7 +450,7 @@ There are 3 letter **'r'**s in the word "strawberry".
 ```
 --
 
-## Psychology Tips for MCP and Agents
+## Psychology Tips for Tools and Agents
 
 ### 🚧 Creating complex projects
 
@@ -462,12 +462,12 @@ There are 3 letter **'r'**s in the word "strawberry".
 
 --
 
-## Psychology Tips for MCP and Agents
+## Psychology Tips for Tools and Agents
 
 ### 🚧 Creating complex projects
 
 **Best Practices for creating complex projects:**
-- **Save the plan to an MD file** - or ask the LLM to do it (if uses MCP)
+- **Save the plan to an MD file** - or ask the LLM to do it (if uses agents)
 - **Ask the LLM to move step by step** through the execution plan. Commit after each step. Use tools like ClaudeCode.
 
 ![Execution plan](images/slide_6_image_3.png)
@@ -475,7 +475,7 @@ There are 3 letter **'r'**s in the word "strawberry".
 
 --
 
-## Psychology Tips for MCP and Agents
+## Psychology Tips for Tools and Agents
 
 ### 🚧 Creating complex projects
 
