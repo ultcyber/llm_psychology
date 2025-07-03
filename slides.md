@@ -367,7 +367,7 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 
 ### Advanced Context Strategies
 
-![Hallucinations](images/slide_6_image_1.png)
+![Temperature](images/slide_6_image_1.png)
 <!-- .element: style="max-width: 65%; margin: 5px auto;" -->
 
 - **Use system prompts** to maintain consistent context
@@ -456,8 +456,31 @@ There are 3 letter **'r'**s in the word "strawberry".
 
 **Best Practices for creating complex projects:**
 - **Create a detailed execution plan** - you can even ask LLM to do it for you.
+
+![Execution plan](images/slide_6_image_2.png)
+<!-- .element: style="max-width: 85%; margin: 5px auto; align: center" -->
+
+--
+
+## Psychology Tips for MCP and Agents
+
+### 🚧 Creating complex projects
+
+**Best Practices for creating complex projects:**
+- **Save the plan to an MD file** - or ask the LLM to do it (if uses MCP)
+- **Ask the LLM to move step by step** through the execution plan. Commit after each step. Use tools like ClaudeCode.
+
+![Execution plan](images/slide_6_image_3.png)
+<!-- .element: style="max-width: 85%; margin: 5px auto; align: center" -->
+
+--
+
+## Psychology Tips for MCP and Agents
+
+### 🚧 Creating complex projects
+
+**Best Practices for creating complex projects:**
 - **Review agent plans** before execution
-- **Ask the LLM to move step by step** through the execution plan. Commit after each step.
 - **Remember** - agents inherit LLM strengths and weaknesses
 
 ---
