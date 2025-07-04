@@ -135,8 +135,7 @@ https://tiktokenizer.vercel.app/
 ## Base model
 
 ![Base Model](images/slide_4_image_2.png)
-<!-- .element: style="max-width: 75%; margin: 5px auto;" -->
-
+<!-- .element: style="max-width: 90%; margin: 5px auto;" -->
 https://huggingface.co/spaces/Bradarr/Gemma-3-pt-llamacpp
 
 ---
@@ -225,7 +224,7 @@ https://tiktokenizer.vercel.app/
 **Red Flags to Watch For:**
 - Very specific claims without sources
 - Information that seems too convenient - especially when you try to correct the model
-- Claims about recent events (training cutoff issues) - can be adjusted with agents (more later)
+- Claims about recent events (training cutoff issues) - can be mitigated with tools (more later)
 
 ---
 
@@ -239,15 +238,13 @@ https://github.com/NVIDIA/RULER
 
 - **Sliding window** - older content gets "forgotten" when limit reached
 
-- **Attention mechanisms** - models focus on relevant parts of context
+- **Attention mechanism** - models tend to focus more on the context
 
 --
 
 ## Psychology Tip: Context Window Management
 
 ### 🧠 Context is Conversation Memory
-
-#### How Models Use Conversation History
 
 **Context Window Psychology:**
 - **Everything in session** is "remembered" and influences responses
@@ -262,10 +259,10 @@ https://github.com/NVIDIA/RULER
 
 **Building on Previous Responses:**
 ```text
-User: "Explain quantum computing"
+User: "Here are my project details: (...). Do you have any suggestions for improvements?"
 AI: [detailed explanation]
-User: "How does this relate to the security example you mentioned?"
-AI: [references specific security point from earlier]
+User: "Would the project benefit from changing to server-side rendering?"
+AI: [references specific project details from previous answer]
 ```
 
 --
