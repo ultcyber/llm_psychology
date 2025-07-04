@@ -276,10 +276,10 @@ AI: [references specific security point from earlier]
 
 **Best Practices:**
 
-**Maintain Context:**
+**Maintaining Context:**
 - Keep **related discussions** in the same conversation - you can reopen previous chats!
 - **Reference earlier points** to build coherent discussions
-- **Summarize key points** when conversations get long
+- **Summarize key points** when conversations get long (some tools do it automatically, ex. Claude Caude auto-compact)
 - **Avoid topic switching** unless necessary - open a new chat when switching topic
 
 --
@@ -290,10 +290,15 @@ AI: [references specific security point from earlier]
 
 **Best Practices:**
 
-**Provide Context When Needed:**
-- **Start with background** when switching topics
-- **Remind the model** of important constraints or preferences
-- **Restate key information** if conversation is getting long
+**Providing Context**
+- **Give the right amount of context at start**
+
+![](images/slide_5_image_2.png)
+<!-- .element: style="max-width: 85%; margin: 5px auto;" -->
+
+average drop of 39%, OpenAI’s o3’s score dropped from 98.1 to 64.1.<br/>
+https://arxiv.org/pdf/2505.06120
+
 
 --
 
@@ -303,11 +308,31 @@ AI: [references specific security point from earlier]
 
 **Best Practices:**
 
-**Work with Context Limits:**
-- **Break complex tasks** into focused conversations
-- **Use conversation history** strategically
-- **Be aware** that models can't "remember" across sessions
+**Providing Context**
+- **Beware of context poisoning** - when models get lost, restart.
 
+>Fixations on delusions due to goal-setting and also due to the Guidance Gemini instance are not
+an uncommon occurrence in watching Gemini Plays Pokémon (...). An especially egregious form of this issue can take place with “context
+poisoning” – where many parts of the context (goals, summary) are “poisoned” with misinformation
+about the game state, which can often take a very long time to undo. As a result, the model can
+become fixated on achieving impossible or irrelevant goals
+
+https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf
+
+--
+
+### Strategic Context Management
+
+#### 💡 Optimizing Your Conversations
+
+**Best Practices:**
+
+**Providing Context**
+- **Divide complex tasks into subproblems**
+
+>We found that a multi-agent system with Claude Opus 4 as the lead agent and Claude Sonnet 4 subagents outperformed single-agent Claude Opus 4 by 90.2% on our internal research eval. For example, when asked to identify all the board members of the companies in the Information Technology S&P 500, the multi-agent system found the correct answers by decomposing this into tasks for subagents, while the single agent system failed to find the answer with slow, sequential searches.
+
+https://www.anthropic.com/engineering/built-multi-agent-research-system
 --
 
 ### Advanced Context Strategies
@@ -373,8 +398,6 @@ This compares the height (3m) to the distance from wall (4m), so tan = 3÷4 = 0.
 - **Use system prompts** to maintain consistent context
 
 - **Use temperature settings** - low temperature == low creativity
-
-- **Start a new chat** when context becomes unfocused
 
 ---
 
