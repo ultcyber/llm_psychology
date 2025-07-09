@@ -31,7 +31,7 @@ Note: We'll follow the LLM training pipeline chronologically. Each phase creates
 ![Data Gathering Process](images/slide_3_image_1.jpg)
 <!-- .element: style="max-width: 35%; margin: 5px auto;" -->
 
-Note: I'm old enough to remember this joke - this is essentially what happens when training LLMs.
+Note: I'm old enough to remember this meme - this is essentially what happens when training LLMs.
 
 --
 ## Phase 1: Collecting Training Data
@@ -264,7 +264,7 @@ https://github.com/NVIDIA/RULER
 
 - **Attention mechanism** - models tend to focus more on the context
 
-Note: Context windows are the model's working memory - everything it can 'remember' during a conversation. There is a tendency for models to concentrate on the context instead of training material. They tend to forget their training as the context gets larger.
+Note: Context windows are the model's working memory - everything it can 'remember' during a conversation. Most models have over 128 thousand token memory, some claim larger, but those numbers are sometimes challeneged - here is a website that tracks "effective" token size instead of declared. All whish is outside the context window is forgotten. There is a tendency for models to concentrate on the context instead of training material. They tend to forget their training as the context gets larger.
 
 --
 
@@ -277,7 +277,7 @@ Note: Context windows are the model's working memory - everything it can 'rememb
 
 - **Context switching** (new chat) completely resets memory
 
-Note: Context is your memory and it will influence future responses. Starting a new chat is like meeting someone with complete amnesia. 
+Note: Context is your memory and it will influence future responses. Starting a new chat is like meeting someone with complete amnesia. Use this wisely.
 
 --
 
@@ -293,7 +293,7 @@ User: "Would the project benefit from changing to server-side rendering?"
 AI: [references specific project details from previous answer]
 ```
 
-Note: This shows effective context usage - the second question builds on the first, and the AI can reference specific project details without you repeating them. This is the model using its context window effectively. The key is maintaining conversational coherence by building on previous exchanges rather than treating each message as isolated.
+Note: This shows effective context usage - the second question builds on the first, and the AI can reference specific project details without you repeating them. The model can also adjust the answer specifically to your project instead of being generic.
 
 --
 
@@ -328,7 +328,7 @@ Note: These practices help you work with the model's memory limitations rather t
 average drop of 39%, OpenAI’s o3’s score dropped from 98.1 to 64.1.<br/>
 https://arxiv.org/pdf/2505.06120
 
-Note: There was a recent publication by a team of researchers at Microsoft where they gave two types of contexts to the LLMs. One was full context in one message, the other way was to split the same information into multiple prompts. Huge drop in efficiency. Lesson for us - give the maximum amount of information at the start.
+Note: How we provide the context also makes a difference. This is from a recent publication by a team of researchers at Microsoft where they gave two types of contexts to the LLMs. One was full context in one message, the other way was to split the same information into multiple prompts. Huge drop in efficiency. Lesson for us - give the maximum amount of information at the start.
 
 --
 
@@ -372,7 +372,7 @@ Note: There is huge value in dividing complex tasks into subproblems. A publicat
 ### Advanced Context Strategies
 
 **Context Priming:**
-- Establish **role and context** for complex tasks
+- Establish **role and context** 
 
 ```text
 [User] Explain trigonometry
@@ -391,14 +391,14 @@ A 30° angle always has the same sine value, whether you're measuring a tiny tri
 (...)
 ```
 
-Note: There is a whole branch called Prompt Engineering which deals with those techniques, I won't be getting into detailed ones, but just wanted to show some of simpler ones. For example, when asking models for explanations, sometimes we have a specific context of the question - for ex. explain some problem to developers vs explaining them to business people.
+Note: There is a whole branch of research called Prompt Engineering which deals with those techniques, I won't be getting into detailed ones, but just wanted to show some of simpler ones. For example, when asking models for explanations, sometimes we have a specific context of the question - for ex. explain some problem to developers vs explaining them to business people.
 
 --
 
 ### Advanced Context Strategies
 
 **Context Priming:**
-- Establish **role and context** for complex tasks
+- Establish **role and context** 
 
 ```text
 [User] You are a helpful Maths teacher who explains the concepts to a primary school student using simple examples. 
@@ -546,6 +546,8 @@ Note: This solves the tokenization problem we discussed earlier! By using code e
 ![Execution plan](images/slide_6_image_3.png)
 <!-- .element: style="max-width: 85%; margin: 5px auto; align: center" -->
 
+Note: What agents allow us to do is to create complex projects almost by themselves (don't forget to supervise). There are some good practices being developed in the community, still we are in early stages of trully capable agent workflows. What is currently recommended is to first create a grand development plan and save it to a file (like MD for example). This is an example of a hobby project I did (present details if you want).
+
 --
 
 ## Psychology Tips for Tools and Agents
@@ -563,9 +565,9 @@ Note: This is crucial - agents don't magically fix LLM psychology. They're still
 ## More
 
 **Missing parts** <br/>
-Reasoning models, RLHF (Reinforcement learning from human feedback), vibe coding?
+Reasoning models, Deep research, voice and image processing, vibe coding?
 
 **Recommended** <br/>
 Andrey Karpathy: https://www.youtube.com/andrejkarpathy
 
-Note: We've covered the core training pipeline and psychological patterns, but there's always more to explore. Reasoning models like o1 add deliberation phases, RLHF shapes behavior through human feedback, and emerging interaction patterns like 'vibe coding' show how LLMs are changing work itself. Andrey Karpathy's content is excellent for deeper technical understanding. The key takeaway: understanding how LLMs are trained gives you superpowers in using them effectively. Every interaction is more productive when you understand the psychology behind the responses.
+Note: We've covered the core training pipeline and psychological patterns, but there's always more to explore. We haven't touched (...). If you're interested in a deep dive into how LLMs work, I highly recommend Andrey Karpathy's channel. The key takeaway: understanding how LLMs are trained gives you superpowers in using them effectively. Every interaction is more productive when you understand the psychology behind the responses.
