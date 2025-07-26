@@ -2,6 +2,8 @@
 
 A modern web-based presentation about understanding Large Language Models and psychological tips for effective usage.
 
+URL: https://ultcyber.github.io/llm_psychology/
+
 ## Files
 
 - `index.html` - Main presentation file (open this in a browser)
